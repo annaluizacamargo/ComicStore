@@ -6,11 +6,12 @@
     top: 0px;
     background-color: var(--background);
     display: flex;
+    border-bottom: 10px var(--gray) solid;
 }
 
 .header h1 {
     height: 100%;
-    width: 50%;
+    width: 60%;
     padding: 2rem 4rem;
     margin: 0;
     box-sizing: border-box;
@@ -19,4 +20,63 @@
 
 .header img {
     height: 100%;
+}
+
+.menu {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+}
+
+.menu .user {
+    color: var(--red);
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu .user:hover {
+    color: var(--red-contrast);
+    cursor: pointer;
+}
+
+i.fa-solid {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+h4 {
+    font-family: var(--font-bebas);
+    font-size: 2rem;
+}
+
+.wish-list {
+    color: var(--white);
+}
+
+.wish-list:hover {
+    color: var(--red-contrast);
+    cursor: pointer;
+}
+
+.btn-cart {
+    display: flex;
+    padding: 0.5rem;
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 1rem;
+    border-color: var(--gray);
+    align-items: center;
+    text-align: center;
+}
+
+.btn-cart:hover {
+    background-color: var(--red-contrast);
+    border-color: var(--red-contrast);
+    cursor: pointer;
+}
+
+.btn-cart h4 {
+    padding: 0 0.5rem;
 }

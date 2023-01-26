@@ -9,11 +9,13 @@ export const Header = () => {
                     <i class="fa-solid fa-user"></i>
                     <h4>Olá, Anna</h4>
                 </div>
-                <h4>Wish List</h4>
-                <div className='cart'>
+                <div className='wish-list'>
+                    <h4>Wish List</h4>                    
+                </div>
+                <button className='btn-cart'>
                     <i class="fa-solid fa-cart-shopping"></i>
                     <h4>Cart</h4>
-                </div>
+                </button>
             </div>
         </header>
     )
