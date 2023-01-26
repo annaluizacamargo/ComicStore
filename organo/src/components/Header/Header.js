@@ -1,7 +1,9 @@
-//import 'Header.css';
+import './Header.css';
 
 export const Header = () => {
     return (
-        console.log("ComicStore")
+        <header className='header'>
+            <h1><img src="/images/logo.svg" alt="Logo principal da página ComicStore" /></h1>
+        </header>
     )
 }
