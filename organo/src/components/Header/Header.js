@@ -4,9 +4,7 @@ export const Header = () => {
     return (
         <header className='header'>
             <h1>
-                <a href="https://github.com/annaluizacamargo/ComicStore">
-                    <img src="/images/logo.svg" alt="Logo principal da página ComicStore" />
-                </a>
+                <img src="/images/logo.svg" alt="Logo principal da página ComicStore" />
             </h1>
             <div className='menu'>
                 <div className='user'>
