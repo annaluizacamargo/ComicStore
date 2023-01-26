@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital@0;1&display=swap');
+
 :root {
   --background: rgb(136, 255, 0);
+  --red: #FF7C7C;
+  --red-contrast: #B50000;
+  --white: #FEFEFE;
+  --gray: #555555;
+  --font-bebas:'Bebas Neue', cursive;
+  --font-montserrat:'Montserrat', sans-serif;
 }
 
 .App {
