@@ -1,0 +1,65 @@
+.comic {
+    margin-top: 11rem;
+    width: 15rem;
+    text-align: center;
+}
+
+.comic img {
+    max-height: 15rem;
+    border-radius: 30px;
+}
+
+.descricao {
+    font-family: var(--font-montserrat);
+    color: var(--white);
+    padding: 1rem;
+}
+
+.descricao h4 {
+    font-family: var(--font-montserrat);
+    margin-bottom: 0.5rem;
+}
+
+.descricao h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.btn-action {
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.btn-action button {
+    width: 80%;
+    font-family: var(--font-bebas);
+    font-size: 1.5rem;
+    background-color: var(--red);
+    border-radius: 30px;
+    border-color: var(--red);
+}
+
+.btn-action i {
+    width: 20%;
+    font-size: 2rem;
+    text-align: right;
+    color: var(--red);
+    margin: auto 0;
+}
+
+.btn-action button:hover {
+    background-color: var(--red-contrast);
+    border-color: var(--red-contrast);
+    cursor: pointer;
+}
+
+.btn-action i:hover {
+    color: var(--red-contrast);
+    cursor: pointer;
+}
+
+
