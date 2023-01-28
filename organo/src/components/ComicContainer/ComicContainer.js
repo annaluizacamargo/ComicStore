@@ -2,6 +2,9 @@ import { Comic } from '../Comic/Comic';
 import './ComicContainer.css';
 import md5 from 'md5';
 import Api from '../../services/index';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import {responsive} from './ConfigCarousel'
 
 const getComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
     const ts = Date.now();
@@ -24,19 +27,20 @@ const getComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
     }
 }
 
-
 export const ComicContainer = () => {
-    getComics();
+    //getComics();
     return (
-        <div className='container'>
-            <h3>Guardians Of The Galaxy</h3>
-            <div className='comics'>
+        <div className='comicContainer'>
+            <h3>Guardians Of The Galaxy</h3>        
+            <Carousel responsive={responsive}>
                 <Comic></Comic>
                 <Comic></Comic>
                 <Comic></Comic>
                 <Comic></Comic>
                 <Comic></Comic>
-            </div>
+                <Comic></Comic>
+                <Comic></Comic>
+            </Carousel>
         </div>
     )
 }

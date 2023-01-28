@@ -1,0 +1,19 @@
+.comicContainer {
+    margin-top: 10rem;
+    background-color: red;
+}
+
+.comicContainer h3 {
+    font-family: var(--font-bebas);
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.comicContainer .comics {
+    width: fit-content;
+    display: flex;
+    margin: 1rem;
+    overflow-x: auto;
+}
+
+
