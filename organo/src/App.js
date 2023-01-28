@@ -1,19 +1,12 @@
 import './App.css';
-import { Comic } from './components/Comic/Comic';
+import ComicContainer from './components/ComicContainer';
 import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Comic />
-      <Comic />
-      <Comic />
-      <Comic />
-      <Comic />
-      <Comic />
-      <Comic />
-      <Comic />
+      <ComicContainer />
     </div>
   );
 }
