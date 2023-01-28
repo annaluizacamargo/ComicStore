@@ -2,7 +2,7 @@ import './Comic.css';
 
 export const Comic = () => {
     return (
-        <section className='comic'>
+        <div className='comic'>
             <img src='https://comicboom.com.br/loja/wp-content/uploads/2018/11/guardioes-da-galaxia-1.jpg'/>
             <div className='descricao'>
                 <h4>Título (ano)</h4>
@@ -13,6 +13,6 @@ export const Comic = () => {
                 <button>Buy</button>
                 <i class="fa-regular fa-bookmark"></i>
             </div>
-        </section>
+        </div>
     )
 }
