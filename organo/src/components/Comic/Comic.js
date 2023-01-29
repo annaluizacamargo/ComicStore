@@ -7,7 +7,6 @@ export const Comic = (props) => {
             <img src={props.comic.image + '.' +props.comic.imageExtension}/>
             <div className='descricao'>
                 <h4>{props.comic.title}</h4>
-                <p>Volume: {props.comic.issueNumber}</p>
                 <h3>${props.comic.price}</h3>
             </div>
             <div className='btn-action'>

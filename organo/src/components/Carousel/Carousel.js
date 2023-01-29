@@ -39,7 +39,6 @@ export const Carousel = (props) => {
 
                     const resultsTransform = results.map((comic) => {
                         const title = comic.title;
-                        const issueNumber = comic.issueNumber;
                         const price = comic.prices[0].price;
 
                         let image = "";
@@ -50,7 +49,7 @@ export const Carousel = (props) => {
                             imageExtension = comic.images[0].extension;
                         }
 
-                        return { title, issueNumber, image, imageExtension, price };
+                        return { title, image, imageExtension, price };
                     })
 
                     setComics(resultsTransform);
