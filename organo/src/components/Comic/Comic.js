@@ -1,13 +1,14 @@
 import './Comic.css';
 
-export const Comic = () => {
+export const Comic = (props) => {
+    console.log(props.comic)
     return (
         <div className='comic'>
-            <img src='https://comicboom.com.br/loja/wp-content/uploads/2018/11/guardioes-da-galaxia-1.jpg'/>
+            <img src={props.comic.image + '.' +props.comic.imageExtension}/>
             <div className='descricao'>
-                <h4>Título (ano)</h4>
-                <p>Issue</p>
-                <h3>$3.99</h3>
+                <h4>{props.comic.title}</h4>
+                <p>Volume: {props.comic.issueNumber}</p>
+                <h3>${props.comic.price}</h3>
             </div>
             <div className='btn-action'>
                 <button>Buy</button>

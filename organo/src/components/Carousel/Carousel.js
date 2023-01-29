@@ -1,11 +1,10 @@
 import Comic from "../Comic";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import md5 from 'md5';
 import Api from '../../services/index';
 
-
-export const Carousel = async () => {
+export const Carousel = () => {
     const settingsCarrousel = {
         infinite: false,
         dots: true,
@@ -15,51 +14,56 @@ export const Carousel = async () => {
         variableWidth: true,
     };
 
-    const getComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
-        const ts = Date.now();
-        const apikey = '901618b8ac07dd281a0ce3fa55425002';
-        const privateKey = '3f6091590e17861b7fb40b8ca0dac813692ddf18';
+    const [comics, setComics] = useState([]);
     
-        const params = {
-            ts,
-            apikey,
-            hash: md5(ts + privateKey + apikey),
-            titleStartsWith: 'avengers', //!SUBSTITUIR POR VARIÁVEL
-            orderBy: '-focDate',
-        }
-    
-        try {
-            const response = await Api.get('/v1/public/comics', { params })
-            const results = response.data.data.results
+    useEffect(
+        () => {
+            const listComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
+                const ts = Date.now();
+                const apikey = '901618b8ac07dd281a0ce3fa55425002';
+                const privateKey = '3f6091590e17861b7fb40b8ca0dac813692ddf18';
 
-            const resultsTransform = results.map((comic) => {
-                const title = comic.title
-                const issueNumber = comic.issueNumber
-
-                let image = ""
-                let imageExtension = ""                    
-                if(comic.images.length > 0){
-                    image = comic.images[0].path
-                    imageExtension = comic.images[0].extension
+                const params = {
+                    ts,
+                    apikey,
+                    hash: md5(ts + privateKey + apikey),
+                    titleStartsWith: 'avengers', //!SUBSTITUIR POR VARIÁVEL
+                    orderBy: '-focDate',
                 }
 
-                const price = comic.prices[0].price
-                return {title, issueNumber, image, imageExtension, price}
-            })
+                try {
+                    const response = await Api.get('/v1/public/comics', { params });
+                    const results = response.data.data.results;
 
-            //console.log(resultsTransform)
-            return resultsTransform
-        } catch (error) {
-            console.error(error)
-        }
-    }
+                    const resultsTransform = results.map((comic) => {
+                        const title = comic.title;
+                        const issueNumber = comic.issueNumber;
+                        const price = comic.prices[0].price;
 
-    //const comics = Array.from(Array(20).keys())
-    const comics = await getComics();
-    console.log(comics)
-    //return (
-    //    <Slider {...settingsCarrousel}>
-    //        {comics.map((index) => (<Comic key={index} title={} issueNumber={} image={} price={}/>))}
-    //    </Slider>
-    //);
+                        let image = "";
+                        let imageExtension = "";
+
+                        if (comic.images.length > 0) {
+                            image = comic.images[0].path;
+                            imageExtension = comic.images[0].extension;
+                        }
+
+                        return { title, issueNumber, image, imageExtension, price };
+                    })
+
+                    setComics(resultsTransform);
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+            listComics()
+        },
+        []
+    )
+    
+    return (
+        <Slider {...settingsCarrousel}>
+            {comics.map((comic) => (<Comic key={comic.title} comic={comic} />))}
+        </Slider>
+    );
 }
