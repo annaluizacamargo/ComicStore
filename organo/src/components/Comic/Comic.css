@@ -1,9 +1,11 @@
 .comic {
+    background-color: var(--white);
     width: 10rem;
     text-align: center;
     border-right: 1px var(--white) solid;
-    padding: 0 2rem;
-    padding-bottom: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin: 0 1.5rem;
 }
 
 .comic img {
@@ -17,7 +19,7 @@
 
 .descricao {
     font-family: var(--font-montserrat);
-    color: var(--white);
+    color: var(--background);
     padding: 1rem;
 }
 
@@ -30,6 +32,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     padding-top: 0.5rem;
+    color: var(--background);
 }
 
 .btn-action {

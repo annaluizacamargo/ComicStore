@@ -2,6 +2,10 @@ import { Comic } from '../Comic/Comic';
 import './ComicContainer.css';
 import md5 from 'md5';
 import Api from '../../services/index';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Carousel from '../Carousel';
 
 const getComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
     const ts = Date.now();
@@ -28,16 +32,8 @@ export const ComicContainer = () => {
     //getComics();
     return (
         <div className='comicContainer'>
-            <h3>Guardians Of The Galaxy</h3>
-            <div>
-                <Comic></Comic>
-                <Comic></Comic>
-                <Comic></Comic>
-                <Comic></Comic>
-                <Comic></Comic>
-                <Comic></Comic>
-                <Comic></Comic>
-            </div>
+            <h3 className='tipe'>Guardians Of The Galaxy</h3>
+            <Carousel />
         </div>
     )
 }
