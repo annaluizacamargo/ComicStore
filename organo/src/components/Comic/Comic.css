@@ -6,11 +6,14 @@
     padding: 1rem 2rem;
     border-radius: 15px;
     margin: 0 1.5rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .comic img {
     min-width: 100%;
-    max-height: 15rem;
+    height: 50%;
 }
 
 .comic img:hover {
@@ -18,6 +21,10 @@
 }
 
 .descricao {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     font-family: var(--font-montserrat);
     color: var(--background);
     padding: 1rem;
@@ -26,6 +33,13 @@
 .descricao h4 {
     font-family: var(--font-montserrat);
     margin-bottom: 0.5rem;
+    height: 50%;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.descricao h4::first-letter {
+    text-transform: uppercase;
 }
 
 .descricao h3 {
