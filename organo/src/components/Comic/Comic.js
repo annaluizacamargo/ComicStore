@@ -1,7 +1,16 @@
+import { useState } from 'react';
 import './Comic.css';
 
 export const Comic = (props) => {
     //console.log(props.comic)
+    const buy = () => {
+        console.log("oi")
+    }
+
+    const save = () => setIsSave(!isSave);
+
+    const [isSave, setIsSave] = useState(false)
+
     return (
         <div className='comic'>
             <img src={props.comic.image + '.' +props.comic.imageExtension}/>
@@ -10,8 +19,8 @@ export const Comic = (props) => {
                 <h3>${props.comic.price}</h3>
             </div>
             <div className='btn-action'>
-                <button>Buy</button>
-                <i class="fa-regular fa-bookmark"></i>
+                <button onClick={buy}>Buy</button>
+                <i className={isSave? "fa-solid fa-bookmark" : "fa-regular fa-bookmark"} onClick={save}></i>
             </div>
         </div>
     )
