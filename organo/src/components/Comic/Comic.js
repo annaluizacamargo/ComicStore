@@ -1,7 +1,7 @@
 import './Comic.css';
 
 export const Comic = (props) => {
-    console.log(props.comic)
+    //console.log(props.comic)
     return (
         <div className='comic'>
             <img src={props.comic.image + '.' +props.comic.imageExtension}/>

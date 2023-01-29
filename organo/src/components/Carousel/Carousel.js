@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import md5 from 'md5';
 import Api from '../../services/index';
 
-export const Carousel = () => {
+export const Carousel = (props) => {
     const settingsCarrousel = {
         infinite: false,
         dots: true,
@@ -15,20 +15,22 @@ export const Carousel = () => {
     };
 
     const [comics, setComics] = useState([]);
-    
+
     useEffect(
         () => {
-            const listComics = async () => { //!PASSAR PARÂMETRO DA VARIÁVEL
+            const listComics = async () => {
                 const ts = Date.now();
                 const apikey = '901618b8ac07dd281a0ce3fa55425002';
                 const privateKey = '3f6091590e17861b7fb40b8ca0dac813692ddf18';
+                const titleStartsWith = props.nameSection;
 
                 const params = {
                     ts,
                     apikey,
                     hash: md5(ts + privateKey + apikey),
-                    titleStartsWith: 'avengers', //!SUBSTITUIR POR VARIÁVEL
+                    titleStartsWith,
                     orderBy: '-focDate',
+                    formatType: 'comic',
                 }
 
                 try {
@@ -52,15 +54,16 @@ export const Carousel = () => {
                     })
 
                     setComics(resultsTransform);
+
                 } catch (error) {
                     console.error(error)
                 }
             }
-            listComics()
+            listComics();
         },
         []
     )
-    
+
     return (
         <Slider {...settingsCarrousel}>
             {comics.map((comic) => (<Comic key={comic.title} comic={comic} />))}
