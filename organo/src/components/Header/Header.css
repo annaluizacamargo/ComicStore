@@ -12,7 +12,7 @@
     z-index: 100;
 }
 
-.header h1 {
+.header h1, .logo {
     height: 80%;
     width: 60%;
     padding: 0 2rem 0 4rem;
@@ -54,15 +54,16 @@
     margin: auto 0;
 }
 
-.user h4, .wish-list h4, .btn-cart h4 {
+.user h4, .h4-wish-list, .btn-cart h4 {
     font-family: var(--font-bebas);
     font-size: 1.3rem;
     margin: auto 0;
     text-align: center;
     padding: 0 0.5rem;
+    text-decoration: none;
 }
 
-.wish-list {
+.h4-wish-list {
     color: var(--white);
     padding: 0 1rem;
 }
