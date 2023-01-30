@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import WishList from '../../content/WishList';
 import './Comic.css';
 import { DeleteLocalStorage, SaveLocalStorage } from './LocalStorage';
+
+
 
 export const Comic = (props) => {
     //console.log(props.comic)
@@ -9,16 +11,13 @@ export const Comic = (props) => {
         console.log("oi")
     }
 
-    const save = (comic) => {
+    useEffect(() => {
+        setIsSave(localStorage.getItem(props.comic.title) != null)
+    }, [])
 
-        //const comic = element.target.parentElement.parentElement
-        console.log(comic)
+    const save = (comic) => {
         setIsSave(!isSave)
-        if(!isSave){
-            SaveLocalStorage(comic);
-        } else {
-            DeleteLocalStorage(comic);
-        }
+        !isSave? SaveLocalStorage(comic) : DeleteLocalStorage(comic);
     };
 
     const [isSave, setIsSave] = useState(false)
