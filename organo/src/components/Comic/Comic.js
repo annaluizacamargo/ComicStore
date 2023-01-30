@@ -12,7 +12,12 @@ export const Comic = (props) => {
     }
 
     useEffect(() => {
-        setIsSave(localStorage.getItem(props.comic.title) != null)
+        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem('isSaved'))
+        const indexComicSaved = arrayComicsLocalStorage.findIndex(value => value.title === props.comic.title)
+
+        if (indexComicSaved > -1) {
+            setIsSave(true)
+        }
     }, [])
 
     const save = (comic) => {
