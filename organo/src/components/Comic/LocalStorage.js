@@ -1,22 +1,20 @@
-//export const SaveLocalStorage = (comic) => {
-//    localStorage.setItem(comic.title, JSON.stringify(comic));
-//}
-
+const comicKeySave = 'comicSaved';
 
 export const SaveLocalStorage = (comic) => {
-    let localStorageValue = JSON.parse(localStorage.getItem('isSaved'));
+    let arrayComicsLocalStorage = JSON.parse(localStorage.getItem(comicKeySave));
 
-    if (localStorageValue == null) {
-        localStorage.setItem('isSaved', JSON.stringify([comic]))
+    if (arrayComicsLocalStorage == null) {
+        localStorage.setItem(comicKeySave, JSON.stringify([comic]));
     } else {
-        localStorageValue.push(comic)
-        localStorage.setItem('isSaved', JSON.stringify(localStorageValue))
+        arrayComicsLocalStorage.push(comic);
+        localStorage.setItem(comicKeySave, JSON.stringify(arrayComicsLocalStorage));
     }
 }
 
 export const DeleteLocalStorage = (comic) => {
-    let localStorageValue = JSON.parse(localStorage.getItem('isSaved'));
-    const indexRemove = localStorageValue.findIndex(obj => obj.title === comic.title)
-    localStorageValue.splice((indexRemove), 1)
-    localStorage.setItem('isSaved', JSON.stringify(localStorageValue))
+    let arrayComicsLocalStorage = JSON.parse(localStorage.getItem(comicKeySave));
+    const indexRemove = arrayComicsLocalStorage.findIndex(objComic => objComic.title === comic.title);
+
+    arrayComicsLocalStorage.splice(indexRemove, 1);
+    localStorage.setItem(comicKeySave, JSON.stringify(arrayComicsLocalStorage));
 }

@@ -12,16 +12,13 @@ export const Comic = (props) => {
     }
 
     useEffect(() => {
-        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem('isSaved'))
-        const indexComicSaved = arrayComicsLocalStorage.findIndex(value => value.title === props.comic.title)
-
-        if (indexComicSaved > -1) {
-            setIsSave(true)
-        }
+        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem('isSaved'));
+        const comicIsSaved = arrayComicsLocalStorage.some(value => value.title === props.comic.title);
+        setIsSave(comicIsSaved);
     }, [])
 
     const save = (comic) => {
-        setIsSave(!isSave)
+        setIsSave(!isSave);
         !isSave? SaveLocalStorage(comic) : DeleteLocalStorage(comic);
     };
 
