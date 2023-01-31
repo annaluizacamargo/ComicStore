@@ -1,0 +1,14 @@
+.slick-slider .slick-list .slick-track {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.slick-slider .slick-dots {
+    bottom: -5rem;
+    color: white;
+}
+
+.slick-slider .slick-dots li button::before {
+    color: white;
+}
