@@ -9,7 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Header from './components/Header';
+import WishList from './content/WishList';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "wish-list",
-    element: <Header />,
+    element: <WishList />,
   },
 ]);
 

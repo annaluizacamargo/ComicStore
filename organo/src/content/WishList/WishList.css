@@ -1,0 +1,19 @@
+.container-wish-list {
+    margin: 4rem;
+    margin-top: 10rem;
+}
+
+.container-wish-list .h3 {
+    font-family: var(--font-bebas);
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.comics-save {
+    display: inline-flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
