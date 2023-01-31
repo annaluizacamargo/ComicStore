@@ -22,6 +22,9 @@ export const Comic = (props) => {
     const save = (comic) => {
         setIsSave(!isSave);
         !isSave ? SaveLocalStorage(comic) : DeleteLocalStorage(comic);
+        if (props.saveLocalStorage != null) {
+            props.saveLocalStorage(comic);
+        }
     };
 
     return (
