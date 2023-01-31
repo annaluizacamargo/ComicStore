@@ -5,14 +5,8 @@
 
 .comicContainer .tipe {
     font-family: var(--font-bebas);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--white);
     margin-bottom: 2rem;
     margin-left: 2rem;
 }
-
-.comics {
-    display: flex;
-}
-
-

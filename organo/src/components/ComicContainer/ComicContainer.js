@@ -6,11 +6,11 @@ import Carousel from '../Carousel';
 
 export const ComicContainer = (props) => {
     const nameSection = props.nameSection;
-    
+
     return (
         <div className='comicContainer'>
             <h3 className='tipe'>{nameSection}</h3>
-            <Carousel nameSection={nameSection} key={nameSection}/>
+            <Carousel nameSection={nameSection} key={nameSection} />
         </div>
     )
 }
