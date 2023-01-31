@@ -17,10 +17,11 @@
 }
 
 .comic img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-.descricao {
+.comic .descricao {
     height: 40%;
     display: flex;
     flex-direction: column;
@@ -31,7 +32,7 @@
     box-sizing: border-box;
 }
 
-.descricao h4 {
+.comic .descricao h4 {
     font-family: var(--font-montserrat);
     margin-bottom: 1rem;
     height: 70%;
@@ -41,11 +42,11 @@
     line-height: 1.15rem;
 }
 
-.descricao h4::first-letter {
+.comic .descricao h4::first-letter {
     text-transform: uppercase;
 }
 
-.descricao h3 {
+.comic .descricao h3 {
     height: 30%;
     font-size: 1.5rem;
     font-weight: bold;
@@ -53,7 +54,7 @@
     color: var(--background);
 }
 
-.btn-action {
+.comic .btn-action {
     height: 10%;
     width: 100%;
     display: flex;
@@ -62,17 +63,23 @@
     padding: 0 1rem;
 }
 
-.btn-action button {
+.comic .btn-action button {
     width: 80%;
     font-family: var(--font-bebas);
     font-size: 1.5rem;
     background-color: var(--red);
     border-radius: 30px;
     border-color: var(--red);
-    margin-right: 1rem;    
+    margin-right: 1rem;
 }
 
-.btn-action i {
+.comic .btn-action button:hover {
+    background-color: var(--red-contrast);
+    border-color: var(--red-contrast);
+    cursor: pointer;
+}
+
+.comic .btn-action i {
     width: 20%;
     font-size: 2rem;
     text-align: right;
@@ -80,15 +87,7 @@
     margin: auto 0;
 }
 
-.btn-action button:hover {
-    background-color: var(--red-contrast);
-    border-color: var(--red-contrast);
-    cursor: pointer;
-}
-
-.btn-action i:hover {
+.comic .btn-action i:hover {
     color: var(--red-contrast);
     cursor: pointer;
 }
-
-

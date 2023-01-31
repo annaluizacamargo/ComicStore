@@ -3,7 +3,7 @@ import './Comic.css';
 import { DeleteLocalStorage, GetLocalStorage, SaveLocalStorage } from './LocalStorage';
 
 export const Comic = (props) => {
-    const [isSave, setIsSave] = useState(false)
+    const [isSave, setIsSave] = useState(false);
 
     useEffect(() => {
         const arrayComicsLocalStorage = GetLocalStorage();
@@ -12,11 +12,11 @@ export const Comic = (props) => {
             const comicIsSaved = arrayComicsLocalStorage.some(value => value.title === props.comic.title);
             setIsSave(comicIsSaved);
         }
-    }, [])
+    }, []);
 
     const buy = () => {
         //_ TO DO
-        console.log("to do")
+        console.log("to do");
     }
 
     const save = (comic) => {
