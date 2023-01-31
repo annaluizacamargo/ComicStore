@@ -6,8 +6,8 @@
   --red-contrast: #B50000;
   --white: #FEFEFE;
   --gray: #555555;
-  --font-bebas:'Bebas Neue', cursive;
-  --font-montserrat:'Montserrat', sans-serif;
+  --font-bebas: 'Bebas Neue', cursive;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 
 body {
