@@ -12,12 +12,12 @@
     z-index: 100;
 }
 
-a.logo {
+.header a.logo {
     height: 100%;
     width: 60%;
 }
 
-.header h1 {
+.header .logo h1 {
     padding: 1rem 2rem 1rem 5rem;
     height: 100%;
     width: 100%;
@@ -28,12 +28,12 @@ a.logo {
     align-items: center;
 }
 
-.header img {
+.header .logo h1 img {
     max-height: 100%;
     max-width: 100%;
 }
 
-.menu {
+.header .menu {
     width: 40%;
     display: flex;
     align-items: center;
@@ -42,27 +42,27 @@ a.logo {
     padding-right: 5%;
 }
 
-.menu .user {
+.header .menu .user {
     color: var(--red);
     display: flex;
     align-items: flex-end;
 }
 
-.menu .user:hover {
+.header .menu .user:hover {
     color: var(--red-contrast);
     cursor: pointer;
 }
 
-.user i,
-.btn-cart i {
+.header .menu .user i,
+.header .menu .btn-cart i {
     font-size: 1.3rem;
     padding-left: 0.5rem;
     margin: auto 0;
 }
 
-.user h4,
-.h4-wish-list,
-.btn-cart h4 {
+.header .menu .user h4,
+.header .menu .wish-list a,
+.header .menu .btn-cart h4 {
     font-family: var(--font-bebas);
     font-size: 1.3rem;
     margin: auto 0;
@@ -71,17 +71,21 @@ a.logo {
     text-decoration: none;
 }
 
-.h4-wish-list {
+.header .menu .wish-list i {
+    display: none;
+}
+
+.header .menu .wish-list a {
     color: var(--white);
     padding: 0 1rem;
 }
 
-.wish-list:hover {
+.header .menu .wish-list a:hover {
     color: var(--red-contrast);
     cursor: pointer;
 }
 
-.btn-cart {
+.header .menu button {
     display: flex;
     padding: 0.5rem;
     background-color: var(--gray);
@@ -92,31 +96,30 @@ a.logo {
     text-align: center;
 }
 
-.btn-cart:hover {
+.header .menu button:hover {
     background-color: var(--red-contrast);
     border-color: var(--red-contrast);
     cursor: pointer;
 }
 
-.btn-cart h3 {
+.header .menu button h3 {
     padding: 0 0.5rem;
 }
 
 
+
 /*Responsividade*/
 @media (max-width: 839px) {
-
     .header .logo {
         width: 100%;
         position: relative;
     }
 
-
-    .header img {
+    .header .logo h1 img {
         margin: 0 auto;
     }
 
-    .menu {
+    .header .menu {
         position: fixed;
         width: 100%;
         height: fit-content;
@@ -130,100 +133,45 @@ a.logo {
         padding-bottom: 1rem;
     }
 
-    .menu .user {
+    .header .menu .user,
+    .header .menu .wish-list,
+    .header .menu .btn-cart {
         width: calc(100% / 3);
         color: var(--white);
-    }
-
-    .menu .user h4,
-    .menu .wish-list .h4-wish-list,
-    .menu .btn-cart h4 {
-        display: none;
-    }
-
-    .menu .user:hover {
-        color: var(--white);
-    }
-
-    .user i,
-    .btn-cart i,
-    .wish-list i {
-        font-size: 1.3rem;
-        padding: 0 0.5rem;
-        padding-top: 1rem;
-        margin: 0 auto;
-        border-top: 5px solid var(--gray);
-        color: white;
-    }
-
-    .user i:hover,
-    .btn-cart i:hover,
-    .wish-list i:hover {
-        border-top: 5px solid var(--white);
-        color: var(--white);
-        cursor: pointer;
-    }
-
-    .wish-list {
-        width: calc(100%/3);
         text-align: center;
-    }
-
-    .menu .btn-cart {
         padding: 0;
         background-color: none;
         border: none;
-        width: calc(100%/3);
     }
 
-    .menu .btn-cart:hover {
+    .header .menu .user h4,
+    .header .menu .wish-list a,
+    .header .menu .btn-cart h4 {
+        display: none;
+    }
+
+    .header .menu .user i,
+    .header .menu .wish-list i,
+    .header .menu .btn-cart i {
+        display: block;
+        font-size: 1.3rem;
+        padding: 1rem 0.5rem 0 0.5rem;
+        margin: 0 auto;
+        border-top: 5px solid var(--gray);
+        color: white;
+        width: fit-content;
+    }
+
+    .header .menu .user i:hover,
+    .header .menu .wish-list i:hover,
+    .header .menu .btn-cart i:hover {
+        border-top: 5px solid var(--red);
+        color: var(--white);
+        cursor: pointer;
+    }
+    
+    .header .menu .btn-cart:hover {
         background-color: var(--gray);
         border: none;
     }
-
-
-
-
-    .user h4,
-    .h4-wish-list,
-    .btn-cart h4 {
-        font-family: var(--font-bebas);
-        font-size: 1.3rem;
-        margin: auto 0;
-        text-align: center;
-        padding: 0 0.5rem;
-        text-decoration: none;
-    }
-
-    .h4-wish-list {
-        color: var(--white);
-        padding: 0 1rem;
-    }
-
-    .wish-list:hover {
-        color: var(--red-contrast);
-        cursor: pointer;
-    }
-
-    .btn-cart {
-        display: flex;
-        padding: 0.5rem;
-        background-color: var(--gray);
-        color: var(--white);
-        border-radius: 1rem;
-        border-color: var(--gray);
-        align-items: center;
-        text-align: center;
-    }
-
-    .btn-cart:hover {
-        background-color: var(--red-contrast);
-        border-color: var(--red-contrast);
-        cursor: pointer;
-    }
-
-    .btn-cart h3 {
-        padding: 0 0.5rem;
-    }
-
 }
