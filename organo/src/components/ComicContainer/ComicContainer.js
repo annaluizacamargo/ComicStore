@@ -1,4 +1,3 @@
-import { Comic } from '../Comic/Comic';
 import './ComicContainer.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
