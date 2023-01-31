@@ -22,7 +22,7 @@ a.logo {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    margin: auto 0;    
+    margin: auto 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -53,13 +53,16 @@ a.logo {
     cursor: pointer;
 }
 
-.user i, .btn-cart i {
+.user i,
+.btn-cart i {
     font-size: 1.3rem;
     padding-left: 0.5rem;
     margin: auto 0;
 }
 
-.user h4, .h4-wish-list, .btn-cart h4 {
+.user h4,
+.h4-wish-list,
+.btn-cart h4 {
     font-family: var(--font-bebas);
     font-size: 1.3rem;
     margin: auto 0;
@@ -97,4 +100,130 @@ a.logo {
 
 .btn-cart h3 {
     padding: 0 0.5rem;
+}
+
+
+/*Responsividade*/
+@media (max-width: 839px) {
+
+    .header .logo {
+        width: 100%;
+        position: relative;
+    }
+
+
+    .header img {
+        margin: 0 auto;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        left: 0px;
+        bottom: 0px;
+        background-color: var(--gray);
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        z-index: 100;
+        padding-bottom: 1rem;
+    }
+
+    .menu .user {
+        width: calc(100% / 3);
+        color: var(--white);
+    }
+
+    .menu .user h4,
+    .menu .wish-list .h4-wish-list,
+    .menu .btn-cart h4 {
+        display: none;
+    }
+
+    .menu .user:hover {
+        color: var(--white);
+    }
+
+    .user i,
+    .btn-cart i,
+    .wish-list i {
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+        padding-top: 1rem;
+        margin: 0 auto;
+        border-top: 5px solid var(--gray);
+        color: white;
+    }
+
+    .user i:hover,
+    .btn-cart i:hover,
+    .wish-list i:hover {
+        border-top: 5px solid var(--white);
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .wish-list {
+        width: calc(100%/3);
+        text-align: center;
+    }
+
+    .menu .btn-cart {
+        padding: 0;
+        background-color: none;
+        border: none;
+        width: calc(100%/3);
+    }
+
+    .menu .btn-cart:hover {
+        background-color: var(--gray);
+        border: none;
+    }
+
+
+
+
+    .user h4,
+    .h4-wish-list,
+    .btn-cart h4 {
+        font-family: var(--font-bebas);
+        font-size: 1.3rem;
+        margin: auto 0;
+        text-align: center;
+        padding: 0 0.5rem;
+        text-decoration: none;
+    }
+
+    .h4-wish-list {
+        color: var(--white);
+        padding: 0 1rem;
+    }
+
+    .wish-list:hover {
+        color: var(--red-contrast);
+        cursor: pointer;
+    }
+
+    .btn-cart {
+        display: flex;
+        padding: 0.5rem;
+        background-color: var(--gray);
+        color: var(--white);
+        border-radius: 1rem;
+        border-color: var(--gray);
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-cart:hover {
+        background-color: var(--red-contrast);
+        border-color: var(--red-contrast);
+        cursor: pointer;
+    }
+
+    .btn-cart h3 {
+        padding: 0 0.5rem;
+    }
+
 }

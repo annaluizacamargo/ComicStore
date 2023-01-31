@@ -14,9 +14,10 @@ export const Header = () => {
             <div className='menu'>
                 <div className='user'>
                     <i class="fa-solid fa-user"></i>
-                    <h4>Olá, Anna</h4>
+                    <h4>Hello user</h4>
                 </div>
                 <div className='wish-list'>
+                    <i className={"fa-solid fa-bookmark"}></i>
                     <Link to='/wish-list' className='h4-wish-list'>Wish List</Link>
                 </div>
                 <button className='btn-cart'>
