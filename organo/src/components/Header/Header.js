@@ -18,8 +18,10 @@ export const Header = () => {
                 </div>
 
                 <div className='wish-list'>
-                    <i className={"fa-solid fa-bookmark"}></i>
-                    <Link to='/wish-list'>Wish List</Link>
+                    <Link to='/wish-list'>
+                        <i className={"fa-solid fa-bookmark"}></i>
+                        <h4>Wish List</h4>
+                    </Link>
                 </div>
 
                 <button className='btn-cart'>
@@ -28,7 +30,7 @@ export const Header = () => {
                 </button>
 
             </div>
-            
+
         </header>
     )
 }

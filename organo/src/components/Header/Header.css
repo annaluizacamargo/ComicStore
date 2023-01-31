@@ -12,6 +12,10 @@
     z-index: 100;
 }
 
+.header a {
+    text-decoration: none;
+}
+
 .header a.logo {
     height: 100%;
     width: 60%;
@@ -61,26 +65,25 @@
 }
 
 .header .menu .user h4,
-.header .menu .wish-list a,
+.header .menu .wish-list a h4,
 .header .menu .btn-cart h4 {
     font-family: var(--font-bebas);
     font-size: 1.3rem;
     margin: auto 0;
     text-align: center;
     padding: 0 0.5rem;
-    text-decoration: none;
 }
 
-.header .menu .wish-list i {
+.header .menu .wish-list a i {
     display: none;
 }
 
-.header .menu .wish-list a {
+.header .menu .wish-list a h4 {
     color: var(--white);
     padding: 0 1rem;
 }
 
-.header .menu .wish-list a:hover {
+.header .menu .wish-list a h4:hover {
     color: var(--red-contrast);
     cursor: pointer;
 }
@@ -130,6 +133,7 @@
         justify-content: space-between;
         box-sizing: border-box;
         z-index: 100;
+        padding: 0;
         padding-bottom: 1rem;
     }
 
@@ -145,13 +149,13 @@
     }
 
     .header .menu .user h4,
-    .header .menu .wish-list a,
+    .header .menu .wish-list a h4,
     .header .menu .btn-cart h4 {
         display: none;
     }
 
     .header .menu .user i,
-    .header .menu .wish-list i,
+    .header .menu .wish-list a i,
     .header .menu .btn-cart i {
         display: block;
         font-size: 1.3rem;
@@ -163,7 +167,7 @@
     }
 
     .header .menu .user i:hover,
-    .header .menu .wish-list i:hover,
+    .header .menu .wish-list a i:hover,
     .header .menu .btn-cart i:hover {
         border-top: 5px solid var(--red);
         color: var(--white);
