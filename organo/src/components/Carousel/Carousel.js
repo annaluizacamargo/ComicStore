@@ -2,7 +2,6 @@ import Comic from "../Comic";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import md5 from 'md5';
-import Api from '../../services/index';
 import axios from "axios";
 
 export const Carousel = (props) => {
@@ -32,7 +31,7 @@ export const Carousel = (props) => {
                     titleStartsWith,
                     orderBy: '-focDate',
                     formatType: 'comic',
-                }
+                };
 
                 try {
                     const response = await axios.get('https://gateway.marvel.com/v1/public/comics', { params });
@@ -56,13 +55,12 @@ export const Carousel = (props) => {
                     setComics(resultsTransform);
 
                 } catch (error) {
-                    console.error(error)
+                    console.error(error);
                 }
             }
             listComics();
-        },
-        []
-    )
+        }, []
+    );
 
     return (
         <Slider {...settingsCarrousel}>
