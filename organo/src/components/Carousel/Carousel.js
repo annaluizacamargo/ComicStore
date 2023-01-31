@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import md5 from 'md5';
 import Api from '../../services/index';
+import axios from "axios";
 
 export const Carousel = (props) => {
     const settingsCarrousel = {
@@ -34,7 +35,7 @@ export const Carousel = (props) => {
                 }
 
                 try {
-                    const response = await Api.get('/v1/public/comics', { params });
+                    const response = await axios.get('https://gateway.marvel.com/v1/public/comics', { params });
                     const results = response.data.data.results;
 
                     const resultsTransform = results.map((comic) => {
