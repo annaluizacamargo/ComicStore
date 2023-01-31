@@ -18,3 +18,5 @@ export const DeleteLocalStorage = (comic) => {
     arrayComicsLocalStorage.splice(indexRemove, 1);
     localStorage.setItem(comicKeySave, JSON.stringify(arrayComicsLocalStorage));
 }
+
+export const GetLocalStorage = () => JSON.parse(localStorage.getItem(comicKeySave));

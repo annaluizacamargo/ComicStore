@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react';
-import WishList from '../../content/WishList';
 import './Comic.css';
-import { DeleteLocalStorage, SaveLocalStorage } from './LocalStorage';
-
-
+import { DeleteLocalStorage, GetLocalStorage, SaveLocalStorage } from './LocalStorage';
 
 export const Comic = (props) => {
-    const buy = () => {
-        //_ TO DO
-        console.log("to do")
-    }
+    const [isSave, setIsSave] = useState(false)
 
     useEffect(() => {
-        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem('isSaved'));
+        const arrayComicsLocalStorage = GetLocalStorage();
 
         if (arrayComicsLocalStorage != null) {
             const comicIsSaved = arrayComicsLocalStorage.some(value => value.title === props.comic.title);
@@ -20,12 +14,15 @@ export const Comic = (props) => {
         }
     }, [])
 
+    const buy = () => {
+        //_ TO DO
+        console.log("to do")
+    }
+
     const save = (comic) => {
         setIsSave(!isSave);
         !isSave ? SaveLocalStorage(comic) : DeleteLocalStorage(comic);
     };
-
-    const [isSave, setIsSave] = useState(false)
 
     return (
         <div className='comic' key={props.comic.title}>
