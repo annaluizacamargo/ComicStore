@@ -2,7 +2,7 @@ import './App.css';
 import ComicContainer from './components/ComicContainer';
 import Header from './components/Header';
 
-const nameSections = ['Guardians of the Galaxy', 'Shang-Chi', 'Doctor Strange', 'Black Panther'];
+const nameSections = ['Avengers', 'Guardians of the Galaxy', 'Shang-Chi', 'Doctor Strange', 'Black Panther'];
 
 function App() {
   return (

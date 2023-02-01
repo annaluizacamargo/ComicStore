@@ -47,6 +47,9 @@ export const Carousel = (props) => {
                         if (comic.images.length > 0) {
                             image = comic.images[0].path;
                             imageExtension = comic.images[0].extension;
+                        } else {
+                            image = '/images/img-error'
+                            imageExtension = 'jpg';
                         }
 
                         return { title, image, imageExtension, price };
