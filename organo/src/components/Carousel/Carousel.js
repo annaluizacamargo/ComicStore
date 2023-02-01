@@ -39,11 +39,10 @@ export const Carousel = (props) => {
                     const results = response.data.data.results;
 
                     const resultsTransform = results.map((comic) => {
-                        const title = comic.title;
-                        const price = comic.prices[0].price;
-
                         let image = "";
                         let imageExtension = "";
+                        const title = comic.title;
+                        const price = comic.prices[0].price == 0 ? 7.99 : comic.prices[0].price;
 
                         if (comic.images.length > 0) {
                             image = comic.images[0].path;
