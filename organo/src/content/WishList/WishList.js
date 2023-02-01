@@ -9,7 +9,7 @@ export const WishList = () => {
     const [comicsSaved, setcomicsSaved] = useState([]);
 
     useEffect(() => {
-        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem(comicKeySave)); 
+        const arrayComicsLocalStorage = JSON.parse(localStorage.getItem(comicKeySave));
         setcomicsSaved(arrayComicsLocalStorage);
     }, [])
 
@@ -19,13 +19,17 @@ export const WishList = () => {
         setcomicsSaved([...comicsSaved]);
     }
 
+
     return (
         <div>
             <Header />
             <div className="container-wish-list">
                 <h3 className="h3">Wish List</h3>
                 <div className="comics-save">
-                    {comicsSaved.map((comic) => (<Comic key={comic.title} comic={comic} saveLocalStorage={saveLocalStorage} />))}
+                    {comicsSaved.length > 0
+                        ? (comicsSaved.map((comic) => (<Comic key={comic.title} comic={comic} saveLocalStorage={saveLocalStorage} />)))
+                        : (<div className="inform-wish-list"><h3 >Your wish list is empty 😕</h3></div>)
+                    }
                 </div>
             </div>
         </div>
