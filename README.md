@@ -1,7 +1,7 @@
 ![Group 14](https://user-images.githubusercontent.com/100868704/215923042-a132d444-8a6a-4c88-af72-b7977765a747.png)
 
 ## 🚀✨ Proposta do Desafio
-Bem-vindo(a) ao "ComicStore", um site onde é possível comprar as revistas de história em quadrinhos da Marvel, estando disponível para acesso no link: <https://comic-store-iota.vercel.app/>.
+Bem-vindo(a) ao "ComicStore", um site onde é possível comprar as revistas de história em quadrinhos da Marvel, estando disponível para acesso no link: <https://comic-store-five.vercel.app/>.
 
 ![Resultado Final](https://user-images.githubusercontent.com/100868704/215923051-effc0991-a0ad-4570-91a6-dce40028586c.png)
 
