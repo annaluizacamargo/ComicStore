@@ -8,7 +8,7 @@ Bem-vindo(a) ao "ComicStore", um site onde é possível comprar as revistas de h
 ## 🎯✨ Objetivos
 Este foi meu primeiro projeto utilizando React, após menos de uma semana de estudos para a sua implementação. Além disso, busquei desenvolver um site utilizando conceitos de LocalStorage e integração com a API da [Marvel](https://developer.marvel.com/).
 É válido ressaltar que todo planejamento, elaboração, estudos e desenvolvimento foi realizado ao longo de nove dias, possuindo funcionalidades ainda em andamento (cadastro, perfil do usuário e compras).
-Caso queira saber um pouquinho mais do processo de elaboração e criação, fiz um breve benchmarking, elenquei possíveis referências e ideias de layout, escolhi as cores que possuíssem acessibilidade visual, e todo esse trajeto até chegar neste resultado final é possível visualizar no meu repositório do [Figma](https://www.figma.com/file/qXdCWxg4vvZbXeTDEwGgNh/ComicStore?node-id=1%3A165&t=ByoANFmSj3zZQM6G-1).<br><br>
+Caso queira saber um pouquinho mais do processo de elaboração e criação, fiz um breve benchmarking, elenquei possíveis referências e ideias de layout, escolhi as cores que possuíssem acessibilidade visual, e todo esse trajeto até chegar neste resultado final é possível visualizar no meu repositório do Figma. Para acesso basta entrar em contato comigo.<br><br>
 
 ## 🧠✨ Dificuldades e o que aprendi
 Tive a oportunidade de consolidar alguns conceitos de =
